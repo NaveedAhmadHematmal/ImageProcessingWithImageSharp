@@ -55,8 +55,9 @@ namespace ImageProcessingWithImageSharp.Core
             return image;
         }
 
-        public static Image DrawTextAtImage(Image image, string text, Color color, float size, float x, float y, int fontAttribute = 0, string fontFamily = "resources/fonts/TitleFont.ttf")
+        public static Image DrawTextAtImage(Image image, string text, Color color, float size, float x, float y, int fontAttribute = 0)
         {
+            var fontFamily = "resources/fonts/arial.ttf";
             if (!File.Exists(fontFamily))
             {
                 throw new FileNotFoundException("Font not found!");

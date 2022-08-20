@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace ImageProcessingWithImageSharp.Templates
 {
 
-    public class SecondTemplate
+    public class SecondTemplate : IImageTemplate
     {
         private Image _sampleImage;
         private Image _logo;
@@ -32,10 +32,10 @@ namespace ImageProcessingWithImageSharp.Templates
             _sampleImage = ImageProcessingCore.DrawImageAt(_sampleImage, _logo, 20, 20);
 
             // write campaign title
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.CampaignName, Color.White, 45, 10, 820, 1, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.CampaignName, Color.White, 45, 10, 820, 1);
 
             // writes user names
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, $"@{campaign.CampaignCreatorUsername}", Color.Red, 25, 680, 840, 1, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, $"@{campaign.CampaignCreatorUsername}", Color.Red, 25, 680, 840, 1);
 
             // draws bottom line skeleton
             _sampleImage = ImageProcessingCore.DrawImageAt(_sampleImage, _bottomLayer, 0, 920);
@@ -44,19 +44,19 @@ namespace ImageProcessingWithImageSharp.Templates
             _sampleImage = ImageProcessingCore.DrawImageAt(_sampleImage, _activityImage, 16, 925);
 
             // writes activity name
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.TrackingMethodName, Color.White, 30, 100, 940, 0, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.TrackingMethodName, Color.White, 30, 100, 940, 0);
 
             // draws NGO image
             _sampleImage = ImageProcessingCore.DrawImageAt(_sampleImage, _NgoUrl, 380, 940);
 
             // writes NGO name
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.TrackingMethodName, Color.White, 30, 455, 940, 0, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.TrackingMethodName, Color.White, 30, 455, 940, 0);
 
             // draws pledge amount as icon
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, $"${NumberHelper.FormatNumberToString(long.Parse(campaign.CampaignPledgeAmountText))}", Color.Red, 30, 724, 935, 1, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, $"${NumberHelper.FormatNumberToString(long.Parse(campaign.CampaignPledgeAmountText))}", Color.Red, 25, 724, 935, 1);
 
             // writes pledge amount
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.CampaignPledgeAmountText, Color.White, 30, 795, 940, 0, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.CampaignPledgeAmountText, Color.White, 30, 795, 940, 0);
 
             return _sampleImage;
         }
