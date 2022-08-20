@@ -48,7 +48,7 @@ namespace ImageProcessingWithImageSharp.Templates
             _baseLayer = ImageProcessingCore.DrawImageAt(_baseLayer, _NgoUrl, 500, 1310);
 
             // draws pledge amount as icon
-            _baseLayer = ImageProcessingCore.DrawTextAtImage(_baseLayer, campaign.CampaignPledgeAmountText, Color.Red, 50, 690, 1300, 1, "resources/fonts/myFont.ttf");
+            _baseLayer = ImageProcessingCore.DrawTextAtImage(_baseLayer, $"${NumberHelper.FormatNumberToString(long.Parse(campaign.CampaignPledgeAmountText))}", Color.Red, 50, 690, 1300, 1, "resources/fonts/myFont.ttf");
             _baseLayer = ImageProcessingCore.DrawTextAtImage(_baseLayer, "Pledge", Color.Red, 30, 700, 1360, 0, "resources/fonts/myFont.ttf");
 
             // saves the image in resources/outputs

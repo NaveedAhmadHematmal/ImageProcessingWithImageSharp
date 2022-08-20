@@ -53,7 +53,7 @@ namespace ImageProcessingWithImageSharp.Templates
             _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.TrackingMethodName, Color.White, 30, 455, 940, 0, "resources/fonts/myFont.ttf");
 
             // draws pledge amount as icon
-            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, "10K", Color.Red, 30, 724, 935, 1, "resources/fonts/myFont.ttf");
+            _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, $"${NumberHelper.FormatNumberToString(long.Parse(campaign.CampaignPledgeAmountText))}", Color.Red, 30, 724, 935, 1, "resources/fonts/myFont.ttf");
 
             // writes pledge amount
             _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.CampaignPledgeAmountText, Color.White, 30, 795, 940, 0, "resources/fonts/myFont.ttf");
