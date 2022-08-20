@@ -122,10 +122,26 @@ public class ImageProcessingCore
         IPen pen = Pens.Solid(Color.White, 1);
         image.Mutate(x => x.Draw(pen, rect));
 
-        rect = new RectangleF(x, y, completed*5.5f, barHeight);
+        rect = new RectangleF(x, y, completed * 5.5f, barHeight);
         pen = Pens.Solid(Color.Orange, 1);
         image.Mutate(x => x.Draw(pen, rect)
                            .Fill(Color.Orange, rect));
         return image;
     }
+
+    // public static float TextWidth(string text)
+    // {   //set font, size & style
+    //     System.Drawing.Font f = new System.Drawing.Font("Microsoft Sans Serif", 14, System.Drawing.FontStyle.Regular);
+
+    //     //create a bmp / graphic to use MeasureString on
+    //     System.Drawing.Bitmap b = new System.Drawing.Bitmap(2200, 2200);
+    //     System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(b);
+
+    //     //measure the string
+    //     System.Drawing.SizeF sizeOfString = new System.Drawing.SizeF();
+    //     sizeOfString = g.MeasureString(text, f);
+
+    //     // return new { Width = sizeOfString.Width, Height = sizeOfString.Height };
+    //     return sizeOfString.Width;
+    // }
 }

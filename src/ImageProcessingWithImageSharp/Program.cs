@@ -1,6 +1,7 @@
 ﻿using ImageProcessingWithImageSharp.Models;
 using ImageProcessingWithImageSharp.Templates;
 using SixLabors.ImageSharp;
+using ImageProcessingWithImageSharp.Core;
 
 // create a campaign
 var campaign = new Campaign()
@@ -22,9 +23,12 @@ var campaign = new Campaign()
 };
 
 // make the objects
-var firstTemplate = new FirstTemplate();
-var secondTemplate = new SecondTemplate();
+// var firstTemplate = new FirstTemplate();
+// var secondTemplate = new SecondTemplate();
 
 // generate the image
-firstTemplate.Generate(campaign).Result.Save("resources/outputs/firstTemplate.jpg");
-secondTemplate.Generate(campaign).Result.Save("resources/outputs/SecondTemplate.jpg");
+// firstTemplate.Generate(campaign).Result.Save("resources/outputs/firstTemplate.jpg");
+// secondTemplate.Generate(campaign).Result.Save("resources/outputs/SecondTemplate.jpg");
+
+// var s = ImageProcessingCore.TextWidth("ts");
+// Console.WriteLine(s);
