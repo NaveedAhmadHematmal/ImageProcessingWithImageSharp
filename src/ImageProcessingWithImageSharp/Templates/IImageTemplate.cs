@@ -5,5 +5,5 @@ namespace ImageProcessingWithImageSharp.Templates;
 
 public interface IImageTemplate
 {
-    public Task<Image> Generate(Campaign campaign);
+    public Task<Image> Generate(GetShareableImageModel campaign);
 }
