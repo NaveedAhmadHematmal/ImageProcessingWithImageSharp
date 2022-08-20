@@ -12,4 +12,8 @@ public class Campaign
     public string? NGOUrl { get; set; }
     public string? NGOName { get; set; }
     public string? PledgeAmount { get; set; }
+    public string? CampaignType { get; set; } // for first template
+    public string? PledgeAmountText { get; set; }
+    public int CompletedProgressBar { get; set; }
+    public string Ends { get; set; }
 }

@@ -30,10 +30,10 @@ public class SecondTemplate
         _sampleImage = ImageProcessingCore.DrawImageAt(_sampleImage, _logo, 20, 20);
 
         // write campaign title
-        _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.Title, Color.White, 45, 10, 820, 1);
+        _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.Title, Color.White, 45, 10, 820, 1, "resources/fonts/myFont.ttf");
         
         // writes user names
-        _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.SubTitle, Color.Red, 25, 680, 840, 1);
+        _sampleImage = ImageProcessingCore.DrawTextAtImage(_sampleImage, campaign.SubTitle, Color.Red, 25, 680, 840, 1, "resources/fonts/myFont.ttf");
 
         // draws bottom line skeleton
         _sampleImage = ImageProcessingCore.DrawImageAt(_sampleImage, _bottomLayer, 0, 920);

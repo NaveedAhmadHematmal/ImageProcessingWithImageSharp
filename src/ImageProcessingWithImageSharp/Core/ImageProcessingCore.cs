@@ -115,4 +115,17 @@ public class ImageProcessingCore
     //         fStream.Close();
     //     }
     // }
+
+    public static Image DrawProgressBar(Image image, float x, float y, int barWidth, int barHeight, int completed)
+    {
+        RectangleF rect = new RectangleF(x, y, barWidth, barHeight);
+        IPen pen = Pens.Solid(Color.White, 1);
+        image.Mutate(x => x.Draw(pen, rect));
+
+        rect = new RectangleF(x, y, completed*5.5f, barHeight);
+        pen = Pens.Solid(Color.Orange, 1);
+        image.Mutate(x => x.Draw(pen, rect)
+                           .Fill(Color.Orange, rect));
+        return image;
+    }
 }
