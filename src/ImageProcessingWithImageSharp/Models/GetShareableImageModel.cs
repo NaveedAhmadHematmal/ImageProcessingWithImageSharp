@@ -1,8 +1,9 @@
 using System.ComponentModel;
 
-namespace ImageProcessingWithImageSharp.Models;
+namespace ImageProcessingWithImageSharp.Models
+{
 
-public class GetShareableImageModel
+    public class GetShareableImageModel
     {
         public int CampaignTypeId { get; set; }
         public string CampaignType
@@ -24,17 +25,18 @@ public class GetShareableImageModel
         public string CampaignCoverPictureUrl { get; set; }
         public string TrackingMethodName { get; set; }
         public string TrackingMethodIconPictureUrl { get; set; }
-        public string	FoundationName { get; set; }
+        public string FoundationName { get; set; }
         public string FoundationLogoPictureUrl { get; set; }
         public string CampaignPledgeAmountText { get; set; }
         public string CampaignTotalPledgeAmountText { get; set; }
-}
+    }
 
-public enum CampaignType
-{
-    [Description("Independent")]
-    Independent = 1,
+    public enum CampaignType
+    {
+        [Description("Independent")]
+        Independent = 1,
 
-    [Description("Social")]
-    Social = 2,
+        [Description("Social")]
+        Social = 2,
+    }
 }
